@@ -75,13 +75,13 @@ const ShippingPage = ({ handleNext, profile }) => {
       newErrors.country = '';
     }
 
-    if (formData.pinCode.trim() === '' || isNaN(formData.pinCode) && formData.pinCode.length == 6) {
+    if (formData.pinCode.trim() === '' || (isNaN(formData.pinCode) && formData.pinCode.length == 6)) {
       newErrors.pinCode = 'Pin Code is required and should be a 6-digit number';
     } else {
       newErrors.pinCode = '';
     }
 
-    if (formData.phoneNo.trim() === '' || isNaN(formData.phoneNo) || formData.phoneNo.length !== 10) {
+    if (formData.phoneNo.trim() === '' || (isNaN(formData.phoneNo) || formData.phoneNo.length !== 10)) {
       newErrors.phoneNo = 'Phone Number is required and should be a 10-digit number';
     } else {
       newErrors.phoneNo = '';
